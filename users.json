@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "role": "owner",
+      "iter": 250000,
+      "salt": "0Y9SMgUUTb8rH57PHZne/A==",
+      "iv": "KxPicwmpniu69959",
+      "ct": "JwzOtGVmMDHBNoBGstahjXS3ffZnx6Q4HN+Z4ylAvPNnosGFoyvSieYUVBi56PJT06mjGBuLb1uJxDwf+owkzoSjqR04SIyPW3pK33gQ/HXlExTvTGiXldz3aXkQtB6SO0PtEOXKDbaR1ksNRw=="
+    }
+  ]
+}
