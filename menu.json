@@ -1,0 +1,171 @@
+{
+  "restaurant": {
+    "name": "كبدة و مكرونة",
+    "address": "6 أكتوبر - الحي الأول - المجاورة الثانية - أمام مسجد عباد الرحمن",
+    "phone": "01113980655",
+    "whatsapp": "201113980655",
+    "ordersEnabled": true,
+    "deliveryFee": 0,
+    "currency": "ج"
+  },
+  "categories": [
+    {
+      "id": "sandwiches",
+      "name": "السندوتشات",
+      "type": "fixed",
+      "options": [
+        "فينو",
+        "بلدي"
+      ],
+      "note": "",
+      "items": [
+        {
+          "id": "rka1fn3n",
+          "name": "كبدة",
+          "prices": [
+            15,
+            15
+          ],
+          "available": true
+        },
+        {
+          "id": "mypwk4lu",
+          "name": "سجق",
+          "prices": [
+            15,
+            15
+          ],
+          "available": true
+        },
+        {
+          "id": "00k6lm8f",
+          "name": "كبدة وقوانص",
+          "prices": [
+            15,
+            15
+          ],
+          "available": true
+        },
+        {
+          "id": "w6l7jr08",
+          "name": "بانيه كوكي",
+          "prices": [
+            15,
+            15
+          ],
+          "available": true
+        },
+        {
+          "id": "sioi1iey",
+          "name": "فاهيتا فراخ",
+          "prices": [
+            15,
+            15
+          ],
+          "available": true
+        },
+        {
+          "id": "ephoq5vb",
+          "name": "حواوشي",
+          "prices": [
+            15,
+            15
+          ],
+          "available": true
+        },
+        {
+          "id": "ec9aso1w",
+          "name": "كفتة",
+          "prices": [
+            15,
+            15
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "kilo",
+      "name": "ركن الكيلو",
+      "type": "fixed",
+      "options": [
+        "⅛ كيلو",
+        "¼ كيلو",
+        "½ كيلو"
+      ],
+      "note": "يقدم مع عيش ومخلل",
+      "items": [
+        {
+          "id": "x2ji5trx",
+          "name": "كبدة",
+          "prices": [
+            15,
+            15,
+            15
+          ],
+          "available": true
+        },
+        {
+          "id": "kbm02ffl",
+          "name": "سجق",
+          "prices": [
+            15,
+            15,
+            15
+          ],
+          "available": true
+        },
+        {
+          "id": "w2mjv3za",
+          "name": "كبدة وقوانص",
+          "prices": [
+            15,
+            15,
+            15
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "pasta",
+      "name": "ركن المكرونة",
+      "type": "open",
+      "amounts": [
+        50,
+        60,
+        75,
+        100
+      ],
+      "minAmount": 0,
+      "note": "قولنا عايزها بكام، والكمية على قد المبلغ",
+      "items": [
+        {
+          "id": "jc64mkec",
+          "name": "مكرونة رد صوص",
+          "available": true
+        },
+        {
+          "id": "fzmyhvox",
+          "name": "مكرونة رد صوص سجق",
+          "available": true
+        },
+        {
+          "id": "6rdjv497",
+          "name": "مكرونة رد صوص كبدة",
+          "available": true
+        },
+        {
+          "id": "svswh5px",
+          "name": "مكرونة رد صوص فاهيتا فراخ",
+          "available": true
+        },
+        {
+          "id": "foxs9n6o",
+          "name": "مكرونة رد صوص كبدة وقوانص",
+          "available": true
+        }
+      ]
+    }
+  ]
+}

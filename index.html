@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1D7A35">
+<meta name="color-scheme" content="light">
+<title>مطعم كبدة و مكرونة | المنيو</title>
+<meta name="description" content="منيو مطعم كبدة و مكرونة - سندوتشات، ركن الكيلو، ومكرونة رد صوص. 6 أكتوبر.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌶️%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#1D7A35; --green-dark:#145A27; --green-soft:#EAF4EC;
+  --red:#D93025; --red-soft:#FCECEA;
+  --ink:#1B2419; --muted:#5E6B5B; --line:#E2E8E0; --paper:#FFFFFF;
+  --display:"Lemonada","Tajawal",system-ui,sans-serif;
+  --text:"Tajawal","Segoe UI",Tahoma,system-ui,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(62px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.55}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px;border-radius:6px}
+.wrap{max-width:640px;margin:0 auto;padding:0 18px}
+
+/* the flyer's rule-and-dot ornament: a line that ends in a red dot */
+.rule{flex:1;height:3px;background:var(--green);border-radius:3px;position:relative;min-width:24px}
+.rule::after{content:"";position:absolute;inset-inline-end:-2px;top:50%;width:13px;height:13px;margin-top:-6.5px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--paper)}
+
+/* header */
+header.top{border-top:6px solid var(--red);padding:26px 0 18px;text-align:center;
+  background:linear-gradient(170deg,var(--paper) 62%,var(--green-soft) 62.2%)}
+.kicker{display:flex;align-items:center;gap:12px;max-width:300px;margin:0 auto;color:var(--green);font-family:var(--display);font-size:1.1rem;font-weight:700}
+.kicker .rule:last-child::after{inset-inline-end:auto;inset-inline-start:-2px}
+h1{font-family:var(--display);font-weight:700;color:var(--green);font-size:clamp(2.3rem,11vw,3.3rem);line-height:1.25;margin:6px 0 2px}
+.addr{color:var(--muted);font-size:.95rem;margin:6px auto 16px;max-width:34ch}
+.contact{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;padding:11px 18px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer}
+.btn svg{width:18px;height:18px;fill:currentColor;flex:none}
+.btn-call{background:var(--red);color:#fff}
+.btn-wa{background:var(--green);color:#fff}
+
+/* category nav */
+nav.cats{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(255,255,255,.96);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.cats .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav.cats .wrap::-webkit-scrollbar{display:none}
+nav.cats a{flex:none;text-decoration:none;font-weight:700;padding:7px 15px;border-radius:999px;border:1.5px solid var(--line);color:var(--ink);white-space:nowrap}
+nav.cats a.on{background:var(--green);border-color:var(--green);color:#fff}
+
+main{padding-bottom:120px}
+section{margin-top:34px}
+.sec-head{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.sec-head h2{font-family:var(--display);font-weight:700;font-size:1.45rem;margin:0;color:var(--green-dark);white-space:nowrap}
+.note{color:var(--muted);margin:0 0 10px;font-size:.95rem}
+
+/* price board */
+.board{width:100%;border-collapse:collapse}
+.board th{font-size:.82rem;color:var(--muted);font-weight:500;padding:6px 4px;text-align:center;white-space:nowrap}
+.board th:first-child{text-align:start}
+.board td{padding:9px 4px;border-top:1px dashed var(--line);vertical-align:middle}
+.board td.name{font-weight:700;font-size:1.05rem}
+.board td.price{text-align:center;width:1%;white-space:nowrap}
+.price-btn{min-width:62px;border:1.5px solid var(--green);background:var(--paper);color:var(--green-dark);border-radius:10px;padding:5px 8px;font-weight:800;font-size:1.05rem;cursor:pointer}
+.price-btn small{font-weight:500;font-size:.72em;margin-inline-start:2px}
+.price-btn:active{background:var(--green);color:#fff}
+.price-btn[disabled]{cursor:default}
+.static .price-btn{border-color:transparent;cursor:default}
+.dash{color:#B5BDB2}
+tr.out td.name{color:#9AA597;text-decoration:line-through}
+.out-tag{font-size:.75rem;font-weight:700;color:var(--red);background:var(--red-soft);border-radius:6px;padding:1px 7px;margin-inline-start:6px;text-decoration:none;display:inline-block}
+
+/* pasta: pay-what-you-want */
+.open-list{list-style:none;margin:0;padding:0}
+.open-list li{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px dashed var(--line)}
+.open-list .name{flex:1;font-weight:700;font-size:1.05rem}
+.amt-btn{border:0;background:var(--red);color:#fff;border-radius:10px;padding:8px 14px;font-weight:700;cursor:pointer;white-space:nowrap}
+.amounts-hint{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 6px}
+.coin{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:32px;padding:0 10px;border-radius:999px;background:var(--red-soft);color:var(--red);font-weight:800}
+
+footer{text-align:center;color:var(--muted);padding:30px 18px 10px;font-size:.9rem}
+
+/* cart bar + sheets */
+.cartbar{position:fixed;inset-inline:0;bottom:0;z-index:20;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));
+  background:linear-gradient(180deg,rgba(255,255,255,0),#fff 35%);display:none;justify-content:center}
+.cartbar.show{display:flex}
+.cartbar button{width:min(612px,100%);display:flex;justify-content:space-between;align-items:center;border:0;border-radius:14px;
+  background:var(--green);color:#fff;padding:14px 18px;font-weight:800;font-size:1.05rem;cursor:pointer;box-shadow:0 6px 18px rgba(29,122,53,.35)}
+.badge{background:#fff;color:var(--green);border-radius:999px;min-width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-size:.95rem;margin-inline-end:8px}
+
+dialog{border:0;padding:0;width:min(560px,100%);max-height:88vh;border-radius:20px 20px 0 0;margin:auto auto 0;color:var(--ink)}
+dialog::backdrop{background:rgba(20,30,20,.45)}
+@media (min-width:640px){dialog{border-radius:20px;margin:auto}}
+.sheet{padding:20px 18px calc(18px + env(safe-area-inset-bottom,0px));overflow:auto;max-height:88vh}
+.sheet h3{font-family:var(--display);font-size:1.25rem;color:var(--green-dark);margin:0 0 12px}
+.x{float:left;border:0;background:var(--green-soft);width:36px;height:36px;border-radius:50%;font-size:1.2rem;cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
+.chip{border:1.5px solid var(--red);background:#fff;color:var(--red);border-radius:12px;padding:10px 16px;font-weight:800;font-size:1.05rem;cursor:pointer}
+.chip.on{background:var(--red);color:#fff}
+label.f{display:block;font-weight:700;font-size:.92rem;margin:12px 0 4px}
+input.t,textarea.t{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit;font-size:1rem;background:#fff}
+input.t:focus,textarea.t:focus{border-color:var(--green);outline:none}
+.err{color:var(--red);font-size:.9rem;min-height:1.3em;margin:6px 0 0}
+.primary{width:100%;border:0;border-radius:12px;background:var(--green);color:#fff;font-weight:800;font-size:1.08rem;padding:14px;margin-top:12px;cursor:pointer}
+.lines{list-style:none;margin:0;padding:0}
+.lines li{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.lines .ln{flex:1}
+.lines .ln b{display:block}
+.lines .ln span{color:var(--muted);font-size:.9rem}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line);background:#fff;font-weight:800;cursor:pointer}
+.sum{display:flex;justify-content:space-between;font-weight:800;font-size:1.15rem;margin:12px 0 4px}
+.seg{display:flex;gap:8px}
+.seg button{flex:1;border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:10px;font-weight:700;cursor:pointer}
+.seg button.on{border-color:var(--green);background:var(--green-soft);color:var(--green-dark)}
+.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px;font-weight:700;font-size:.95rem;opacity:0;pointer-events:none;transition:opacity .2s;z-index:30}
+.toast.show{opacity:1}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.toast{transition:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="kicker"><span class="rule"></span><span>مطعم</span><span class="rule"></span></div>
+    <h1 id="rname">كبدة و مكرونة</h1>
+    <p class="addr" id="raddr"></p>
+    <div class="contact" id="contact"></div>
+  </div>
+</header>
+
+<nav class="cats" aria-label="أقسام المنيو"><div class="wrap" id="nav"></div></nav>
+<main class="wrap" id="menu"></main>
+<footer id="foot"></footer>
+
+<div class="cartbar" id="cartbar"><button type="button" id="openCart"><span><span class="badge" id="cartCount">0</span>طلبك</span><span id="cartTotal"></span></button></div>
+
+<dialog id="amtDlg"><div class="sheet">
+  <button class="x" type="button" data-close aria-label="إغلاق">✕</button>
+  <h3 id="amtTitle"></h3>
+  <div>اختار المبلغ:</div>
+  <div class="chips" id="amtChips"></div>
+  <label class="f" for="amtCustom">أو اكتب مبلغ تاني</label>
+  <input class="t" id="amtCustom" inputmode="numeric" placeholder="مثلًا 65">
+  <p class="err" id="amtErr"></p>
+  <button class="primary" type="button" id="amtAdd">ضيف للطلب</button>
+</div></dialog>
+
+<dialog id="cartDlg"><div class="sheet">
+  <button class="x" type="button" data-close aria-label="إغلاق">✕</button>
+  <h3>طلبك</h3>
+  <ul class="lines" id="lines"></ul>
+  <div class="sum"><span>الإجمالي</span><span id="sumTotal"></span></div>
+  <div class="note" id="feeNote"></div>
+  <label class="f">نوع الطلب</label>
+  <div class="seg" id="kind"><button type="button" data-k="delivery" class="on">توصيل</button><button type="button" data-k="pickup">هاخده من المطعم</button></div>
+  <label class="f" for="cName">الاسم</label><input class="t" id="cName" autocomplete="name">
+  <div id="addrBox"><label class="f" for="cAddr">العنوان بالتفصيل</label><textarea class="t" id="cAddr" rows="2" autocomplete="street-address"></textarea></div>
+  <label class="f" for="cNote">ملاحظات (اختياري)</label><input class="t" id="cNote" placeholder="مثلًا: سبايسي، من غير مخلل">
+  <p class="err" id="cartErr"></p>
+  <button class="primary" type="button" id="send">ابعت الطلب على واتساب</button>
+</div></dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+var DEFAULT_MENU = {"restaurant": {"name": "كبدة و مكرونة", "address": "6 أكتوبر - الحي الأول - المجاورة الثانية - أمام مسجد عباد الرحمن", "phone": "01113980655", "whatsapp": "201113980655", "ordersEnabled": true, "deliveryFee": 0, "currency": "ج"}, "categories": [{"id": "sandwiches", "name": "السندوتشات", "type": "fixed", "options": ["فينو", "بلدي"], "note": "", "items": [{"id": "rka1fn3n", "name": "كبدة", "prices": [15, 15], "available": true}, {"id": "mypwk4lu", "name": "سجق", "prices": [15, 15], "available": true}, {"id": "00k6lm8f", "name": "كبدة وقوانص", "prices": [15, 15], "available": true}, {"id": "w6l7jr08", "name": "بانيه كوكي", "prices": [15, 15], "available": true}, {"id": "sioi1iey", "name": "فاهيتا فراخ", "prices": [15, 15], "available": true}, {"id": "ephoq5vb", "name": "حواوشي", "prices": [15, 15], "available": true}, {"id": "ec9aso1w", "name": "كفتة", "prices": [15, 15], "available": true}]}, {"id": "kilo", "name": "ركن الكيلو", "type": "fixed", "options": ["⅛ كيلو", "¼ كيلو", "½ كيلو"], "note": "يقدم مع عيش ومخلل", "items": [{"id": "x2ji5trx", "name": "كبدة", "prices": [15, 15, 15], "available": true}, {"id": "kbm02ffl", "name": "سجق", "prices": [15, 15, 15], "available": true}, {"id": "w2mjv3za", "name": "كبدة وقوانص", "prices": [15, 15, 15], "available": true}]}, {"id": "pasta", "name": "ركن المكرونة", "type": "open", "amounts": [50, 60, 75, 100], "minAmount": 0, "note": "قولنا عايزها بكام، والكمية على قد المبلغ", "items": [{"id": "jc64mkec", "name": "مكرونة رد صوص", "available": true}, {"id": "fzmyhvox", "name": "مكرونة رد صوص سجق", "available": true}, {"id": "6rdjv497", "name": "مكرونة رد صوص كبدة", "available": true}, {"id": "svswh5px", "name": "مكرونة رد صوص فاهيتا فراخ", "available": true}, {"id": "foxs9n6o", "name": "مكرونة رد صوص كبدة وقوانص", "available": true}]}]};
+
+(function(){
+  var M, cart = [], kind = "delivery", pendingOpen = null;
+  var $ = function(id){ return document.getElementById(id); };
+  function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+  function num(v){ return (Math.round(v * 100) / 100).toString(); }
+  function cur(){ return (M.restaurant && M.restaurant.currency) || "ج"; }
+  function money(v){ return num(v) + " " + cur(); }
+  var ICON_PHONE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>';
+  var ICON_WA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>';
+
+  function load(){
+    fetch("menu.json?v=" + Date.now(), { cache: "no-store" })
+      .then(function(r){ if (!r.ok) throw 0; return r.json(); })
+      .then(function(d){ M = d; render(); })
+      .catch(function(){ M = DEFAULT_MENU; render(); });
+  }
+
+  function ordersOn(){ return !!(M.restaurant && M.restaurant.ordersEnabled && M.restaurant.whatsapp); }
+
+  function render(){
+    var R = M.restaurant || {};
+    document.title = "مطعم " + (R.name || "") + " | المنيو";
+    $("rname").textContent = R.name || "";
+    $("raddr").textContent = R.address || "";
+    var c = "";
+    if (R.phone) c += '<a class="btn btn-call" href="tel:' + esc(R.phone) + '">' + ICON_PHONE + '<span dir="ltr">' + esc(R.phone) + '</span></a>';
+    if (R.whatsapp) c += '<a class="btn btn-wa" href="https://wa.me/' + esc(R.whatsapp) + '" target="_blank" rel="noopener">' + ICON_WA + 'واتساب</a>';
+    $("contact").innerHTML = c;
+    $("foot").innerHTML = esc(R.name ? "مطعم " + R.name : "") + (R.address ? "<br>" + esc(R.address) : "");
+
+    var cats = (M.categories || []).filter(function(k){ return (k.items || []).length; });
+    $("nav").innerHTML = cats.map(function(k, i){ return '<a href="#c-' + i + '">' + esc(k.name) + '</a>'; }).join("");
+    var on = ordersOn();
+    document.body.classList.toggle("static", !on);
+
+    $("menu").innerHTML = cats.map(function(k, i){
+      var h = '<section id="c-' + i + '"><div class="sec-head"><h2>' + esc(k.name) + '</h2><span class="rule"></span></div>';
+      if (k.note) h += '<p class="note">' + esc(k.note) + '</p>';
+      if (k.type === "open") {
+        var am = (k.amounts || []);
+        if (am.length) h += '<div class="amounts-hint">' + am.map(function(a){ return '<span class="coin">' + num(a) + '</span>'; }).join("") + '</div>';
+        h += '<ul class="open-list">' + k.items.map(function(it, j){
+          var out = it.available === false;
+          return '<li' + (out ? ' class="out"' : '') + '><span class="name">' + esc(it.name) + (out ? '<span class="out-tag">خلصت</span>' : '') + '</span>' +
+            (on && !out ? '<button class="amt-btn" type="button" data-open="' + i + ',' + j + '">اختار المبلغ</button>' : '') + '</li>';
+        }).join("") + '</ul>';
+      } else {
+        var opts = k.options && k.options.length ? k.options : [""];
+        h += '<table class="board"><thead><tr><th>الصنف</th>' + opts.map(function(o){ return '<th>' + esc(o) + '</th>'; }).join("") + '</tr></thead><tbody>';
+        h += k.items.map(function(it, j){
+          var out = it.available === false;
+          return '<tr' + (out ? ' class="out"' : '') + '><td class="name">' + esc(it.name) + (out ? '<span class="out-tag">خلصت</span>' : '') + '</td>' +
+            opts.map(function(o, p){
+              var v = (it.prices || [])[p];
+              if (v == null || v === "") return '<td class="price"><span class="dash">—</span></td>';
+              return '<td class="price"><button class="price-btn" type="button" ' + (out || !on ? 'disabled ' : '') + 'data-add="' + i + ',' + j + ',' + p + '" aria-label="' + esc(it.name + " " + o + " " + num(v)) + '">' + num(v) + '<small>' + esc(cur()) + '</small></button></td>';
+            }).join("") + '</tr>';
+        }).join("");
+        h += '</tbody></table>';
+      }
+      return h + '</section>';
+    }).join("");
+    window.__cats = cats;
+    spy();
+    updateCart();
+  }
+
+  // -------- cart --------
+  function toast(t){ var el = $("toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(function(){ el.classList.remove("show"); }, 1400); }
+  function addLine(line){
+    var same = cart.filter(function(l){ return l.key === line.key; })[0];
+    if (same) same.qty++; else cart.push(line);
+    updateCart(); toast("اتضاف: " + line.label);
+  }
+  function total(){ return cart.reduce(function(s, l){ return s + l.price * l.qty; }, 0); }
+  function updateCart(){
+    var n = cart.reduce(function(s, l){ return s + l.qty; }, 0);
+    $("cartbar").classList.toggle("show", n > 0 && ordersOn());
+    $("cartCount").textContent = n;
+    $("cartTotal").textContent = money(total());
+  }
+  function renderLines(){
+    $("lines").innerHTML = cart.map(function(l, i){
+      return '<li><div class="ln"><b>' + esc(l.label) + '</b><span>' + money(l.price) + '</span></div><div class="qty">' +
+        '<button type="button" data-q="' + i + ',1" aria-label="زود">+</button><b>' + l.qty + '</b><button type="button" data-q="' + i + ',-1" aria-label="قلل">−</button></div></li>';
+    }).join("");
+    $("sumTotal").textContent = money(total());
+    var fee = +(M.restaurant.deliveryFee || 0);
+    $("feeNote").textContent = kind === "delivery" && fee > 0 ? "+ " + money(fee) + " توصيل" : "";
+    if (!cart.length) $("cartDlg").close();
+  }
+
+  document.addEventListener("click", function(e){
+    var t = e.target.closest("[data-add],[data-open],[data-q],[data-close],[data-k]");
+    if (!t) return;
+    if (t.hasAttribute("data-close")) { t.closest("dialog").close(); return; }
+    if (t.hasAttribute("data-add")) {
+      var a = t.getAttribute("data-add").split(",").map(Number), k = __cats[a[0]], it = k.items[a[1]], opt = (k.options || [])[a[2]] || "";
+      addLine({ key: it.id + "|" + a[2], label: it.name + (opt ? " (" + opt + ")" : ""), price: +it.prices[a[2]], qty: 1 });
+    }
+    if (t.hasAttribute("data-open")) {
+      var b = t.getAttribute("data-open").split(",").map(Number); openAmount(__cats[b[0]], __cats[b[0]].items[b[1]]);
+    }
+    if (t.hasAttribute("data-q")) {
+      var q = t.getAttribute("data-q").split(",").map(Number), l = cart[q[0]];
+      l.qty += q[1]; if (l.qty <= 0) cart.splice(q[0], 1);
+      updateCart(); renderLines();
+    }
+    if (t.hasAttribute("data-k")) {
+      kind = t.getAttribute("data-k");
+      [].forEach.call($("kind").children, function(b){ b.classList.toggle("on", b === t); });
+      $("addrBox").style.display = kind === "delivery" ? "" : "none";
+      renderLines();
+    }
+  });
+
+  var amtChoice = null;
+  function openAmount(k, it){
+    pendingOpen = { k: k, it: it }; amtChoice = null;
+    $("amtTitle").textContent = it.name;
+    $("amtChips").innerHTML = (k.amounts || []).map(function(a){ return '<button type="button" class="chip" data-amt="' + a + '">' + num(a) + ' ' + esc(cur()) + '</button>'; }).join("");
+    $("amtCustom").value = ""; $("amtErr").textContent = "";
+    $("amtDlg").showModal();
+  }
+  $("amtChips").addEventListener("click", function(e){
+    var b = e.target.closest("[data-amt]"); if (!b) return;
+    amtChoice = +b.getAttribute("data-amt"); $("amtCustom").value = "";
+    [].forEach.call($("amtChips").children, function(x){ x.classList.toggle("on", x === b); });
+  });
+  $("amtCustom").addEventListener("input", function(){
+    amtChoice = null; [].forEach.call($("amtChips").children, function(x){ x.classList.remove("on"); });
+  });
+  $("amtAdd").addEventListener("click", function(){
+    var v = amtChoice != null ? amtChoice : parseFloat(($("amtCustom").value || "").replace(/[٠-٩]/g, function(d){ return "٠١٢٣٤٥٦٧٨٩".indexOf(d); }));
+    var min = +(pendingOpen.k.minAmount || 0);
+    if (!(v > 0)) { $("amtErr").textContent = "اختار مبلغ أو اكتبه"; return; }
+    if (min > 0 && v < min) { $("amtErr").textContent = "أقل مبلغ " + money(min); return; }
+    addLine({ key: pendingOpen.it.id + "|" + v, label: pendingOpen.it.name + " بـ " + money(v), price: v, qty: 1 });
+    $("amtDlg").close();
+  });
+
+  $("openCart").addEventListener("click", function(){ renderLines(); $("cartErr").textContent = ""; $("cartDlg").showModal(); });
+
+  try { $("cName").value = localStorage.getItem("km_name") || ""; $("cAddr").value = localStorage.getItem("km_addr") || ""; } catch (e) {}
+
+  $("send").addEventListener("click", function(){
+    var name = $("cName").value.trim(), addr = $("cAddr").value.trim(), note = $("cNote").value.trim();
+    if (!name) { $("cartErr").textContent = "اكتب اسمك"; $("cName").focus(); return; }
+    if (kind === "delivery" && !addr) { $("cartErr").textContent = "اكتب العنوان عشان نوصلك"; $("cAddr").focus(); return; }
+    try { localStorage.setItem("km_name", name); localStorage.setItem("km_addr", addr); } catch (e) {}
+    var fee = kind === "delivery" ? +(M.restaurant.deliveryFee || 0) : 0;
+    var msg = "طلب جديد\n" +
+      "الاسم: " + name + "\n" +
+      "النوع: " + (kind === "delivery" ? "توصيل" : "استلام من المطعم") + "\n" +
+      (kind === "delivery" ? "العنوان: " + addr + "\n" : "") +
+      "------\n" +
+      cart.map(function(l){ return l.qty + " × " + l.label + " = " + num(l.price * l.qty); }).join("\n") +
+      "\n------\n" +
+      (fee > 0 ? "التوصيل: " + num(fee) + "\n" : "") +
+      "الإجمالي: " + money(total() + fee) +
+      (note ? "\nملاحظات: " + note : "");
+    window.location.href = "https://wa.me/" + M.restaurant.whatsapp + "?text=" + encodeURIComponent(msg);
+  });
+
+  // -------- nav highlight --------
+  function spy(){
+    var links = [].slice.call(document.querySelectorAll("nav.cats a"));
+    if (links[0]) links[0].classList.add("on");
+    if (!("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){
+          var hit = a.getAttribute("href") === "#" + en.target.id;
+          a.classList.toggle("on", hit);
+          if (hit && a.scrollIntoView) a.parentNode.scrollTo({ left: a.offsetLeft - 60, behavior: "smooth" });
+        });
+      });
+    }, { rootMargin: "-35% 0px -60% 0px" });
+    document.querySelectorAll("main section").forEach(function(s){ io.observe(s); });
+  }
+
+  load();
+})();
+</script>
+</body>
+</html>
